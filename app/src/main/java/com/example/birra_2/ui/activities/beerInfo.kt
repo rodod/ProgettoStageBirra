@@ -1,4 +1,4 @@
-package com.example.birra_2
+package com.example.birra_2.ui.activities
 
 import android.content.res.Configuration
 import android.graphics.Typeface
@@ -10,6 +10,9 @@ import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.core.view.ViewCompat
 import com.example.Birra_2.R
+import com.example.birra_2.data.classes.Beer
+import com.example.birra_2.data.dataManager.readData
+import com.example.birra_2.ui.images.loadImage
 
 
 class BeerInfo : ComponentActivity() {

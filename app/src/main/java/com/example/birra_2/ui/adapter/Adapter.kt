@@ -1,4 +1,4 @@
-package com.example.birra_2
+package com.example.birra_2.ui.adapter
 
 import android.app.Activity
 import android.content.Intent
@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.Birra_2.R
 import com.example.Birra_2.databinding.ItemBeerBinding
+import com.example.birra_2.data.classes.Beer
+import com.example.birra_2.ui.activities.BeerInfo
 import com.squareup.picasso.Picasso
 
 class Adapter : ListAdapter<Beer, Holder>(object : DiffUtil.ItemCallback<Beer>(){

@@ -1,10 +1,11 @@
-package com.example.birra_2
+package com.example.birra_2.data.midnightRefresh
 
 import android.app.Activity
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.BatteryManager
+import com.example.birra_2.data.dataManager.updateFile
 
 
 class ChargeBroadcastReceiver : BroadcastReceiver() {

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context="com.example.birra_2.BeerInfo"
+    tools:context="com.example.birra_2.ui.activities.BeerInfo"
     tools:deviceIds="tv"
     tools:ignore="MergeRootFrame">
 

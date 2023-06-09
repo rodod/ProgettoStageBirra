@@ -1,4 +1,5 @@
-package com.example.birra_2
+package com.example.birra_2.data.API
+import com.example.birra_2.data.classes.Beer
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

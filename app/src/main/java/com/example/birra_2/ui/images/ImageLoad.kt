@@ -1,4 +1,4 @@
-package com.example.birra_2
+package com.example.birra_2.ui.images
 
 import android.animation.ObjectAnimator
 import android.widget.ImageView

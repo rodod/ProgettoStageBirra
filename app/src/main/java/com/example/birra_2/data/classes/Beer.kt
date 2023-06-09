@@ -1,4 +1,4 @@
-package com.example.birra_2
+package com.example.birra_2.data.classes
 
 data class Beer (
     val id: Int,

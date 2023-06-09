@@ -1,4 +1,4 @@
-package com.example.birra_2
+package com.example.birra_2.data.midnightRefresh
 
 import android.app.job.JobInfo
 import android.app.job.JobScheduler

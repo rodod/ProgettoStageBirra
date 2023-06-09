@@ -1,4 +1,4 @@
-package com.example.birra_2
+package com.example.birra_2.ui.activities
 
 import android.graphics.Color
 import android.graphics.Typeface
@@ -10,6 +10,11 @@ import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.Birra_2.R
 import com.example.Birra_2.databinding.LayoutBinding
+import com.example.birra_2.data.classes.Beer
+import com.example.birra_2.data.midnightRefresh.ChargeBroadcastReceiver
+import com.example.birra_2.data.dataManager.readData
+import com.example.birra_2.data.dataManager.updateFile
+import com.example.birra_2.ui.adapter.Adapter
 
 
 class MainActivity : ComponentActivity() {

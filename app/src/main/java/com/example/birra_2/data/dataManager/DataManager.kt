@@ -1,8 +1,11 @@
-package com.example.birra_2
+package com.example.birra_2.data.dataManager
 
 import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.birra_2.data.API.ApiClient
+import com.example.birra_2.data.API.BeerApiService
+import com.example.birra_2.data.classes.Beer
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Response
