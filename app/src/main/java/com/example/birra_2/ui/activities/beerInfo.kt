@@ -4,7 +4,6 @@ import android.content.res.Configuration
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.Gravity
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.ComponentActivity
@@ -44,18 +43,13 @@ class BeerInfo : ComponentActivity() {
         for (food in beerReal!!.food_pairing) {
             foods += "\n-> " + food
         }
-        val test: String =
-            beerReal.description + "\nBest foods:" + foods + "\nTips: " + beerReal.brewers_tips
+        val test: String = beerReal.description + "\nBest foods:" + foods + "\nTips: " + beerReal.brewers_tips
         val text = findViewById<TextView>(R.id.textViewinfoBirra)
-        val backButton: Button = findViewById(R.id.ReturnHome)
         val beerTitle = findViewById<TextView>(R.id.beerHeader)
 
 
         loadImage(img, detailImageView)
 
-        backButton.setOnClickListener {
-            finish()
-        }
 
         beerTitle.gravity = Gravity.CENTER
         beerTitle.text = beerReal.name

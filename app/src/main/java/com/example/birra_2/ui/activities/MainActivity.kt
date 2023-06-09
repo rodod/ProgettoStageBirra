@@ -1,11 +1,14 @@
 package com.example.birra_2.ui.activities
 
+import android.content.Context
 import android.graphics.Color
 import android.graphics.Typeface
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.Birra_2.R
@@ -17,6 +20,7 @@ import com.example.birra_2.data.dataManager.updateFile
 import com.example.birra_2.ui.adapter.Adapter
 
 
+@Suppress("DEPRECATION")
 class MainActivity : ComponentActivity() {
     private lateinit var binding : LayoutBinding
     private val adapter = Adapter()
@@ -40,8 +44,16 @@ class MainActivity : ComponentActivity() {
         updateFile(this ) //aggiorna il json mettendo i dati anche nuovi
 
         binding.swipeRefreshLayout.setOnRefreshListener { //ogni volta che refresha
-            updateFile(this)
-            binding.swipeRefreshLayout.isRefreshing = false
+            val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            val networkInfo = connectivityManager.activeNetworkInfo
+
+            if (networkInfo != null && networkInfo.isConnected) {
+                updateFile(this)
+                binding.swipeRefreshLayout.isRefreshing = false
+            } else {
+                Toast.makeText(this, "No connection to internet", Toast.LENGTH_SHORT).show()
+                binding.swipeRefreshLayout.isRefreshing = false
+            }
         }
 
         ChargeBroadcastReceiver().onReceive(this,intent )
